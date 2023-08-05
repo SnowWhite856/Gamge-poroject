@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlla05poa6vc2"]
+
+[ext_resource type="PackedScene" uid="uid://bjh45gg82xfwv" path="res://Assets/floor.blend" id="1_j2suf"]
+[ext_resource type="PackedScene" uid="uid://d2gb5g8gqbmyt" path="res://Assets/wall1.blend" id="2_cdkpf"]
+[ext_resource type="PackedScene" uid="uid://bb4arll655r0k" path="res://Assets/wall2.blend" id="3_a08n4"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3tr2b"]
+data = PackedVector3Array(-0.992, 2, -1, -1.208, 2, 1, -1.208, 2, -1, -0.992, 2, -1, -0.992, 2, 1, -1.208, 2, 1, -0.992, 0, 1, -1.208, 2, 1, -0.992, 2, 1, -0.992, 0, 1, -1.208, 0, 1, -1.208, 2, 1, -1.208, 0, 1, -1.208, 2, -1, -1.208, 2, 1, -1.208, 0, 1, -1.208, 0, -1, -1.208, 2, -1, -1.208, 0, -1, -0.992, 0, 1, -0.992, 0, -1, -1.208, 0, -1, -1.208, 0, 1, -0.992, 0, 1, -0.992, 0, -1, -0.992, 2, 1, -0.992, 2, -1, -0.992, 0, -1, -0.992, 0, 1, -0.992, 2, 1, -1.208, 0, -1, -0.992, 2, -1, -1.208, 2, -1, -1.208, 0, -1, -0.992, 0, -1, -0.992, 2, -1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fn7my"]
+data = PackedVector3Array(1.008, 2, -1, -0.992, 2, -1.216, 1.008, 2, -1.216, 1.008, 2, -1, -0.992, 2, -1, -0.992, 2, -1.216, -0.992, 2, -1.216, -1.208, 0, -1.216, -0.992, 0, -1.216, -0.992, 2, -1.216, -1.208, 2, -1.216, -1.208, 0, -1.216, -0.992, 0, -1.216, 1.008, 2, -1.216, -0.992, 2, -1.216, -0.992, 0, -1.216, 1.008, 0, -1.216, 1.008, 2, -1.216, 1.008, 0, -1.216, -0.992, 0, -1, 1.008, 0, -1, 1.008, 0, -1.216, -0.992, 0, -1.216, -0.992, 0, -1, 1.008, 0, -1, -0.992, 2, -1, 1.008, 2, -1, 1.008, 0, -1, -0.992, 0, -1, -0.992, 2, -1, 1.008, 0, -1.216, 1.008, 2, -1, 1.008, 2, -1.216, 1.008, 0, -1.216, 1.008, 0, -1, 1.008, 2, -1, -1.208, 0, -1, -1.208, 2, -1.216, -1.208, 2, -1, -1.208, 0, -1, -1.208, 0, -1.216, -1.208, 2, -1.216, -0.992, 0, -1.216, -1.208, 0, -1, -0.992, 0, -1, -0.992, 0, -1.216, -1.208, 0, -1.216, -1.208, 0, -1, -0.992, 2, -1, -1.208, 2, -1.216, -0.992, 2, -1.216, -0.992, 2, -1, -1.208, 2, -1, -1.208, 2, -1.216, -0.992, 0, -1, -1.208, 2, -1, -0.992, 2, -1, -0.992, 0, -1, -1.208, 0, -1, -1.208, 2, -1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4ywk1"]
+data = PackedVector3Array(-0.992, 2, -1, -1.208, 2, 1, -1.208, 2, -1, -0.992, 2, -1, -0.992, 2, 1, -1.208, 2, 1, -0.992, 0, 1, -1.208, 2, 1, -0.992, 2, 1, -0.992, 0, 1, -1.208, 0, 1, -1.208, 2, 1, -1.208, 0, 1, -1.208, 2, -1, -1.208, 2, 1, -1.208, 0, 1, -1.208, 0, -1, -1.208, 2, -1, -1.208, 0, -1, -0.992, 0, 1, -0.992, 0, -1, -1.208, 0, -1, -1.208, 0, 1, -0.992, 0, 1, -0.992, 0, -1, -0.992, 2, 1, -0.992, 2, -1, -0.992, 0, -1, -0.992, 0, 1, -0.992, 2, 1, -1.208, 0, -1, -0.992, 2, -1, -1.208, 2, -1, -1.208, 0, -1, -0.992, 0, -1, -0.992, 2, -1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_18dre"]
+data = PackedVector3Array(-1, -0.1, 1, -1, 0.1, -1, -1, 0.1, 1, -1, -0.1, 1, -1, -0.1, -1, -1, 0.1, -1, -1, -0.1, -1, 1, 0.1, -1, -1, 0.1, -1, -1, -0.1, -1, 1, -0.1, -1, 1, 0.1, -1, 1, -0.1, -1, 1, 0.1, 1, 1, 0.1, -1, 1, -0.1, -1, 1, -0.1, 1, 1, 0.1, 1, 1, -0.1, 1, -1, 0.1, 1, 1, 0.1, 1, 1, -0.1, 1, -1, -0.1, 1, -1, 0.1, 1, -1, -0.1, -1, 1, -0.1, 1, 1, -0.1, -1, -1, -0.1, -1, -1, -0.1, 1, 1, -0.1, 1, 1, 0.1, -1, -1, 0.1, 1, -1, 0.1, -1, 1, 0.1, -1, 1, 0.1, 1, -1, 0.1, 1)
+
+[node name="Tiles" type="Node3D"]
+
+[node name="wall2" parent="." instance=ExtResource("3_a08n4")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall2/Wall2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall2/Wall2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_3tr2b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall2/Wall2_001" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall2/Wall2_001/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fn7my")
+
+[node name="wall1" parent="." instance=ExtResource("2_cdkpf")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall1/Wall2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall1/Wall2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_4ywk1")
+
+[node name="floor" parent="." instance=ExtResource("1_j2suf")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor/Floor" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_18dre")
+
+[editable path="wall2"]
+[editable path="wall1"]
+[editable path="floor"]
