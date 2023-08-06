@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://t3fvwao17ao2"]
+
+[ext_resource type="Script" path="res://Scripts/Hub.tres.gd" id="1_1w0ll"]
+[ext_resource type="MeshLibrary" uid="uid://qrfs8drxi06d" path="res://Assets/Tiles.tres" id="1_heseg"]
+[ext_resource type="PackedScene" uid="uid://gik5dt06ei0b" path="res://Scenes/UI/Menu.tscn" id="2_imm8m"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_1vboy"]
+
+[sub_resource type="Sky" id="Sky_5sgk2"]
+sky_material = SubResource("PhysicalSkyMaterial_1vboy")
+
+[sub_resource type="Environment" id="Environment_5yiig"]
+background_mode = 2
+sky = SubResource("Sky_5sgk2")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sqj3f"]
+size = Vector3(6, 5, 8)
+
+[node name="Map" type="Node3D"]
+script = ExtResource("1_1w0ll")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/player.tscn")
+spawn_path = NodePath("..")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_heseg")
+cell_size = Vector3(2, 0.1, 2)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65535, 65535, 1048576, 0, 65535, 1048576, 1, 0, 1048576, 0, 0, 1048576, 0, 1, 1048576, 65535, 1, 1048576, 65534, 1, 1048576, 65534, 0, 1048576, 65534, 65535, 1048576, 65534, 65534, 0, 65535, 65534, 1048576, 65535, 0, 1048576, 0, 65534, 1048576, 1, 65534, 1048576, 1, 65535, 1048576, 1, 1, 1048576, 65537, 65534, 1441793, 65537, 1, 655361, 131071, 1, 1048578, 65536, 1, 1048578, 65537, 65535, 655362, 65537, 0, 655362, 65536, 65534, 1441794, 131071, 65534, 1441794, 65533, 1, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, 65529, 1, 0, 65530, 1, 0, 65531, 1, 0, 65532, 1, 0, 65528, 1, 0, 65528, 0, 0, 65528, 65535, 0, 65529, 65535, 0, 65529, 65534, 0, 65530, 65534, 0, 65531, 65534, 0, 65532, 65534, 0, 65533, 65534, 0, 65533, 65535, 0, 65532, 65535, 0, 65531, 65535, 0, 65530, 65535, 0, 131070, 65534, 1441794, 131069, 65534, 1441794, 131068, 65534, 1441794, 131067, 65534, 1, 131066, 65534, 1441794, 131065, 65534, 1441794, 131064, 65534, 1, 131064, 1, 1048577, 131064, 0, 2, 131064, 65535, 2, 131065, 1, 1048578, 131066, 1, 1048578, 131067, 1, 1048577, 131068, 1, 1048578, 131069, 1, 1048578, 131070, 1, 1048578, 65528, 65534, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5yiig")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 9, 17)
+
+[node name="Menu" parent="." instance=ExtResource("2_imm8m")]
+
+[node name="GameModeSelectorArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameModeSelectorArea"]
+shape = SubResource("BoxShape3D_sqj3f")
+
+[connection signal="body_entered" from="GameModeSelectorArea" to="." method="_on_game_mode_selector_area_body_entered"]

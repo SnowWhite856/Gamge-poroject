@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://gik5dt06ei0b"]
 
-[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_43bjn"]
+[ext_resource type="Script" path="res://Scripts/UI/Menu.gd" id="1_fvxl6"]
 
 [node name="Menu" type="VBoxContainer"]
 anchors_preset = 15
@@ -8,7 +8,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_43bjn")
+script = ExtResource("1_fvxl6")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2

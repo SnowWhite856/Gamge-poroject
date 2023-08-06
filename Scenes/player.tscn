@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwj1caw80hqqd"]
+[gd_scene load_steps=6 format=3 uid="uid://dwj1caw80hqqd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_52ne7"]
 
@@ -11,6 +11,12 @@ properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/sync = true
 properties/0/watch = false
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/sync = true
+properties/1/watch = false
+
+[sub_resource type="BoxMesh" id="BoxMesh_0w6k2"]
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14145, 0)
@@ -30,3 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.894416, 3.02942)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_u1hue")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.309738, 0, 0, 0, 0.106255, 0, 0, 0, 0.271891, -0.0141847, 0.632887, -0.474586)
+mesh = SubResource("BoxMesh_0w6k2")
